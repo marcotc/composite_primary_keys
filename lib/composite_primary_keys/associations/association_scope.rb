@@ -46,8 +46,8 @@ module ActiveRecord
         scope
       end
 
-      def next_chain_scope(scope, table, reflection, association_klass, foreign_table, next_reflection)
-        join_keys = reflection.join_keys(association_klass)
+      def next_chain_scope(scope, table, reflection, foreign_table, next_reflection)
+        join_keys = reflection.join_keys
         key = join_keys.key
         foreign_key = join_keys.foreign_key
 
